@@ -12,8 +12,6 @@ namespace StarterAssets
 	public class FirstPersonController : MonoBehaviour
 	{
 		[Header("Player")]
-        private bool _isGrounded = false;
-        private Transform _currentBlock = null;
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
@@ -234,26 +232,6 @@ namespace StarterAssets
 			wasMoving = _input.move != Vector2.zero;
 			wasGrounded = Grounded;
 		}
-		private void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("MovingPlatform") && !Grounded)
-            {
-                // Parent the player to the block
-                _currentBlock = collision.transform;
-                transform.parent = _currentBlock;
-                Grounded = true;
-            }
-        }
-		private void OnCollisionExit(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("MovingPlatform") && _currentBlock == collision.transform)
-            {
-                // Unparent the player from the block
-                transform.parent = null;
-                _isGrounded = false;
-                _currentBlock = null;
-            }
-        }
 
 		private void JumpAndGravity()
 		{
