@@ -29,6 +29,9 @@ This section provides a step-by-step guide on how to contribute to the game proj
 
 - **Push Your Branch**: Push your branch to the repository.
 - **Create a PR**: Open a Pull Request against the main branch. Ensure your PR title clearly, like `Finished: <Your Name>`.
+- **On GitHub**, you should see a prompt to open a `Pull Request` based on the branch you've just pushed.
+- **Click on** "Compare & pull request," ensuring you're merging your branch into the main branch.
+- **In the PR title**, follow the format: `Finished: <Your Name>`.
 
 ### 5. Build and Share
 
