@@ -55,7 +55,11 @@
     },
     "com.unity.ide.rider": {
       "version": "3.0.27",
+<<<<<<< HEAD
       "depth": 0,
+=======
+      "depth": 1,
+>>>>>>> Logan---01
       "source": "registry",
       "dependencies": {
         "com.unity.ext.nunit": "1.0.6"
@@ -64,7 +68,11 @@
     },
     "com.unity.ide.visualstudio": {
       "version": "2.0.22",
+<<<<<<< HEAD
       "depth": 0,
+=======
+      "depth": 1,
+>>>>>>> Logan---01
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.9"
