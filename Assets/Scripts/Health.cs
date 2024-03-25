@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -13,9 +14,15 @@ public class Health : MonoBehaviour
     public CanvasGroup damageVignette;
     public AudioClip[] landingSounds; // Assign in the Inspector, order: no damage, small, large, death
     private AudioSource audioSource;
+    public GameObject DeathScreen;
+    public Button restartButton;
+    public Button quitButton;
     
     void Start()
     {
+        restartButton.onClick.AddListener(RestartGame);
+        quitButton.onClick.AddListener(QuitGame);
+
         currentHealth = maxHealth;
         
         audioSource = GetComponent<AudioSource>(); // Ensure an AudioSource component is attached
@@ -63,6 +70,11 @@ public class Health : MonoBehaviour
     public void Die()
     {
         isDead = true;
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None; // Free the cursor
+        Cursor.visible = true; // Show the cursor
+        DeathScreen.SetActive(true);
+        
         Debug.Log("Player died");
     }
     
@@ -82,5 +94,17 @@ public class Health : MonoBehaviour
     {
         // Adjust severity to map correctly if needed
         audioSource.PlayOneShot(landingSounds[severity]); // Severity determines the sound clip
+    }
+
+    public void QuitGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
+    }
+    void RestartGame()
+    {
+        SceneManager.LoadScene("Playground");
+        Time.timeScale = 1;
+
     }
 }
