@@ -183,7 +183,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 45
+  m_SlopeLimit: 30
   m_StepOffset: 0.25
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
@@ -200,14 +200,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 4
-  SprintSpeed: 6
+  MoveSpeed: 6
+  SprintSpeed: 18
   RotationSpeed: 1
   SpeedChangeRate: 10
-  JumpHeight: 1.2
-  Gravity: -15
+  JumpHeight: 20
+  Gravity: -20
   JumpTimeout: 0.1
-  FallTimeout: 0.15
+  FallTimeout: 10
   Grounded: 1
   GroundedOffset: -0.14
   GroundedRadius: 0.5
@@ -463,9 +463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b83d29b61b1c14d9bb440a8f2f7313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  safeFallDistance: 6
-  maxFallDistance: 30
-  minFallDamage: 10
+  safeFallDistance: 15
+  maxFallDistance: 50
+  minFallDamage: 1
   maxFallDamage: 100
 --- !u!114 &135756641613574981
 MonoBehaviour:
