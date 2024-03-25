@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 686981140955957989}
   - component: {fileID: 4055211063494181534}
   - component: {fileID: 5852113079513672945}
+  - component: {fileID: 4947550019441011623}
   m_Layer: 0
-  m_Name: Stairs_200x100x200_Prefab
+  m_Name: procedural_stair
   m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,3 +116,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4947550019441011623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335415992372505392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e79b090ffc7fe64e81514fc0b79e202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDelay: 0.1
