@@ -16,10 +16,9 @@ public class PlayerShoots : MonoBehaviour
                 {
                     // Calculate the hit point relative to the block
                     Vector3 relativeHitPoint = hit.point - blockHealth.transform.position;
-
-                    // Assuming each child square is a unit cube and the block's size is 4x4
-                    int blockSize = 4; // Adjust based on your block's actual size
-                    float squareSize = 1.0f; // Adjust based on your child square's actual size
+                    
+                    int blockSize = 4;
+                    float squareSize = 1.0f;
 
                     // Calculate the child index based on the hit point
                     int x = Mathf.FloorToInt(relativeHitPoint.x / squareSize);
@@ -30,7 +29,7 @@ public class PlayerShoots : MonoBehaviour
                     if (x >= 0 && x < blockSize && y >= 0 && y < blockSize && z >= 0 && z < blockSize)
                     {
                         int childIndex = x + y * blockSize + z * blockSize * blockSize;
-                        // Now you have the child index, you can proceed to delete the square
+                        // Now you have the child index, delete the square
                     }
                 }
             }
