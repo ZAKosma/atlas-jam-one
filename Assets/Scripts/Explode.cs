@@ -11,7 +11,7 @@ public class Explode : MonoBehaviour
     {
         // Ensure the video doesn't play immediately
         videoPlayer.playOnAwake = false;
-        videoPlayer.loopPointReached += EndReached; // Subscribe to the event
+        // videoPlayer.loopPointReached += EndReached; // Subscribe to the event
     }
 
     // Method to be called by the UI button to start video playback
@@ -20,9 +20,9 @@ public class Explode : MonoBehaviour
         videoPlayer.Play();
     }
 
-    // Load the next scene after the video finishes playing
-    private void EndReached(VideoPlayer vp)
-    {
-        SceneManager.LoadScene(nextSceneName);
-    }
+    // // Load the next scene after the video finishes playing
+    // private void EndReached(VideoPlayer vp)
+    // {
+    //     SceneManager.LoadScene(nextSceneName);
+    // }
 }

@@ -61,3 +61,7 @@ At the conclusion of the game jam, the final game will be showcased to all parti
 ## Contact
 
 For questions or clarifications about the rules, schedule, or any other concerns, please contact Zak directly.
+
+## Credits
+
+Alien Gun Model - AArt078: https://www.turbosquid.com/3d-models/3d-post-apocalyptic-gun-pbr-lowpoly-game-ready-3d-model-1753070
