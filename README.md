@@ -65,3 +65,4 @@ For questions or clarifications about the rules, schedule, or any other concerns
 ## Credits
 
 Alien Gun Model - AArt078: https://www.turbosquid.com/3d-models/3d-post-apocalyptic-gun-pbr-lowpoly-game-ready-3d-model-1753070
+Grass material - Yughues Free Ground Materials: https://assetstore.unity.com/packages/2d/textures-materials/floors/yughues-free-ground-materials-13001

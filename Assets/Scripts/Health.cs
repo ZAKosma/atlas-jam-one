@@ -103,8 +103,9 @@ public class Health : MonoBehaviour
     }
     void RestartGame()
     {
-        SceneManager.LoadScene("Playground");
+        Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
+        Cursor.visible = false; // Hide the cursor
         Time.timeScale = 1;
-
+        SceneManager.LoadScene("Playground");
     }
 }

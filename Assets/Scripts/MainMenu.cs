@@ -25,6 +25,8 @@ public class MainMenu : MonoBehaviour
 
     void PlayGame()
     {
+        Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
+        Cursor.visible = false; // Hide the cursor
         SceneManager.LoadScene("Playground");
     }
 
