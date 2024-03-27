@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    public GameObject winCavas;
+    
     // This class handles the ending victory condition, the player reaches the goal and doesn't die (waiting 1 to 3 frames to check), they win!
     private void OnTriggerEnter(Collider other)
     {
@@ -23,7 +25,16 @@ public class Goal : MonoBehaviour
         if (!player.GetComponent<Health>().isDead)
         {
             Debug.Log("You win!");
+            WinScreen();
         }
+    }
+
+    void WinScreen()
+    {
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None; // Free the cursor
+        Cursor.visible = true; // Show the cursor
+        winCavas.SetActive(true);
     }
 }
     

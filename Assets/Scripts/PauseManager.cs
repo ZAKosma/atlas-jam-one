@@ -36,11 +36,11 @@ public class PauseManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        isPaused = false;
         Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
         Cursor.visible = false; // Hide the cursor
+        isPaused = false;
+        pauseMenuUI.SetActive(false);
     }
 
     public void PauseGame()
@@ -54,6 +54,7 @@ public class PauseManager : MonoBehaviour
 
     public void QuitGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 }
