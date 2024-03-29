@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -8,9 +7,8 @@ public class Player : MonoBehaviour
     private CharacterController characterController;
     private Health health;
 
-    private bool isFalling = false;
-    private float fallStartHeight = 0.0f;
-    private float fallDistance = 0.0f;
+    public bool isFalling = false;
+    public float fallStartHeight = 0.0f;
 
     // Thresholds and damage values can be adjusted in the Inspector for balancing
     public float safeFallDistance = 3.0f; // Distance in meters the player can fall without taking damage
@@ -37,7 +35,7 @@ public class Player : MonoBehaviour
             {
                 // Player has landed, calculate fall distance and apply damage if necessary
                 isFalling = false;
-                fallDistance = fallStartHeight - transform.position.y;
+                float fallDistance = fallStartHeight - transform.position.y;
                 ApplyFallDamage(fallDistance);
             }
         }
@@ -51,19 +49,19 @@ public class Player : MonoBehaviour
             }
             else
             {
-                // Update the start height to the highest point reached
+                // Continuously update the start height to the highest point reached during fall
                 fallStartHeight = Mathf.Max(fallStartHeight, transform.position.y);
             }
         }
     }
 
-    private void ApplyFallDamage(float distance)
+    public void ApplyFallDamage(float distance)
     {
         if (distance > safeFallDistance)
         {
             float damageRatio = Mathf.InverseLerp(safeFallDistance, maxFallDistance, distance);
             int damageToApply = Mathf.RoundToInt(Mathf.Lerp(minFallDamage, maxFallDamage, damageRatio));
-            health.TakeDamage(damageToApply, fallDistance, maxFallDistance);
+            health.TakeDamage(damageToApply);
             Debug.Log($"Player took {damageToApply} damage from a {distance}m fall.");
         }
         else

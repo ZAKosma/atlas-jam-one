@@ -5,6 +5,8 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     public GameObject winCavas;
+    public float impactThreshold = 10f;
+    public float groundImpactDamage = 50;
     
     // This class handles the ending victory condition, the player reaches the goal and doesn't die (waiting 1 to 3 frames to check), they win!
     private void OnTriggerEnter(Collider other)
