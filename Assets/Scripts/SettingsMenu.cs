@@ -37,7 +37,6 @@ public class SettingsMenu : MonoBehaviour
     public void SetMouseSensitivity(float sensitivity)
     {
         PlayerPrefs.SetFloat("MouseSensitivity", sensitivity);
-        // Note: Apply this sensitivity in your input handling by scaling the mouse movement values.
     }
 
     private void OnDisable()
