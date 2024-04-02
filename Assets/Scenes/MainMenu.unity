@@ -1521,9 +1521,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a914ebf3f1e8074989179e6cad93c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMusicSlider: {fileID: 0}
-  audioSFXSlider: {fileID: 0}
-  sensitivitySlider: {fileID: 0}
+  audioMusicSlider: {fileID: 305041827}
+  audioSFXSlider: {fileID: 326474017}
+  sensitivitySlider: {fileID: 1009378466}
   audioMixer: {fileID: 24100000, guid: 336e37f9fce876041aaf0ff9d665dbf8, type: 2}
 --- !u!1 &118799041
 GameObject:
@@ -3828,10 +3828,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1121812468}
   m_HandleRect: {fileID: 85724008}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.01
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4248,10 +4248,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1976998279}
   m_HandleRect: {fileID: 394929351}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.01
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
