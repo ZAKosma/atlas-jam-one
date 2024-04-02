@@ -1,13 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class MusicPlayer : MonoBehaviour
 {
+    public static MusicPlayer Instance;
+    
     public AudioClip[] songs; // Array of songs to shuffle and play.
     private AudioSource audioSource;
     private List<int> songIndexes; // To keep track of which songs have been played.
     private int currentSongIndex = 0; // Start with the main menu song.
+
+    private void Awake()
+    {
+        if (Instance != this && Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     IEnumerator Start()
     {
